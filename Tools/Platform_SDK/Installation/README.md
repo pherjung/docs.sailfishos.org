@@ -90,7 +90,7 @@ sudo mkdir -p /srv/sailfishos/sdks/sfossdk
 sudo tar --numeric-owner -p -C /srv/sailfishos/sdks/sfossdk -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
 ```
 
-**Attention:** If you chose installation prefix other than `/srv/mer` and your SDK version is 4.3.0.15 (check `/etc/os-release` inside), the following workaround is needed:
+**Attention:** If you chose installation prefix other than `/srv/sailfishos` and your SDK version is 4.3.0.15 (check `/etc/os-release` inside), the following workaround is needed:
 
 ```nosh
 echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
@@ -143,9 +143,9 @@ The next step is to look at [setting up the SDK Build Targets](/Tools/Platform_S
 
 # Updating the Sailfish Platform SDK
 
-You can check your current release version by executing `ssu re` in the SDK. For a newer SDK release version check out the [Sailfish SDK Release Notes](/Tools/Sailfish_SDK#release-notes). In this example we will use Jolla release `2.0.2.48`.
+You can check your current release version by executing `ssu re` in the SDK. For a newer SDK release version check out the [Sailfish SDK Release Notes](/Tools/Sailfish_SDK#release-notes). In this example we will use Jolla release `4.5.0.25`.
 ```nosh
-sudo ssu re 2.0.2.48
+sudo ssu re 4.5.0.25
 sudo zypper ref
 sudo zypper dup
 ```
